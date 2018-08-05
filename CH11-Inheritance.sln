@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.27703.2047
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CH11-Inheritance", "CH11-Inheritance\CH11-Inheritance.csproj", "{99BC9B00-4E8B-4C0E-A04F-C18428D5848F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CH11-InheritanceTests", "CH11-InheritanceTests\CH11-InheritanceTests.csproj", "{441D8812-E380-404C-8004-C4FE5767268B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{99BC9B00-4E8B-4C0E-A04F-C18428D5848F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{99BC9B00-4E8B-4C0E-A04F-C18428D5848F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{99BC9B00-4E8B-4C0E-A04F-C18428D5848F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{441D8812-E380-404C-8004-C4FE5767268B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{441D8812-E380-404C-8004-C4FE5767268B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{441D8812-E380-404C-8004-C4FE5767268B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{441D8812-E380-404C-8004-C4FE5767268B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
