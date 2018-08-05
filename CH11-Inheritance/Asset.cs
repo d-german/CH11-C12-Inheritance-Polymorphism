@@ -10,21 +10,18 @@
 
     public class House : Asset
     {
-        public decimal Mortgage;
-        public decimal EstimatedHomeValue = 0;
+        public decimal Mortgage { get; set; }
+        public decimal EstimatedHomeValue { get; set; } = 0;
+
         public override decimal Liability => Mortgage; // Overridden
         public override decimal NetValue => EstimatedHomeValue - Liability;
     }
 
     public class Stock : Asset
     {
-        public long SharesOwned;
-
+        public long SharesOwned { get; set; }
+        public decimal CurrentPrice { get; set; }
         // We won't override Liability here, because the default implementation will do.
-
-        public decimal CurrentPrice;
-
-        // Override like a virtual method.
         public override decimal NetValue => CurrentPrice * SharesOwned;
 
     }
