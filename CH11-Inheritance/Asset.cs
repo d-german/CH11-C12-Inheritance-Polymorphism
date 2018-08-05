@@ -21,6 +21,7 @@
     {
         public long SharesOwned { get; set; }
         public decimal CurrentPrice { get; set; }
+
         // We won't override Liability here, because the default implementation will do.
         public override decimal NetValue => CurrentPrice * SharesOwned;
 
