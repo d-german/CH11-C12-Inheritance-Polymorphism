@@ -5,7 +5,7 @@
         public Asset(int assetId) => this.assetId = assetId;
 
         public string Name { get; set; }
-        private readonly int assetId = 12355; 
+        private int assetId = 12355; 
 
         public virtual decimal Liability { get; } = 0; // Virtual
         public abstract decimal NetValue { get; }	// Note empty implementation
@@ -15,7 +15,10 @@
 
     public class House : Asset
     {
-        public House(int assetId): base(assetId){}
+        public House(int assetId): base(assetId)
+        {
+           // this.assetId = 6;
+        }
 
         public decimal Mortgage { get; set; }
         public decimal EstimatedHomeValue { get; set; } = 0;
