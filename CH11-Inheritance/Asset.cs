@@ -1,23 +1,27 @@
 ﻿namespace CH11_Inheritance
 {
-    public abstract class Asset
+    public abstract class Asset : object
     {
-        public Asset(int assetId) => this.assetId = assetId;
+        private int assetId = 12355;
+
+        protected Asset(int assetId) => this.assetId = assetId;
 
         public string Name { get; set; }
-        private int assetId = 12355; 
 
         public virtual decimal Liability { get; } = 0; // Virtual
-        public abstract decimal NetValue { get; }	// Note empty implementation
+        public abstract decimal NetValue { get; } // Note empty implementation
 
-        public override string ToString() => Name;      
+        public override string ToString()
+        {
+            return $"{Name} id: {assetId}";
+        }
     }
 
     public class House : Asset
     {
-        public House(int assetId): base(assetId)
+        public House(int assetId) : base(assetId)
         {
-           // this.assetId = 6;
+            // this.assetId = 6;
         }
 
         public decimal Mortgage { get; set; }
@@ -26,12 +30,17 @@
         public override decimal Liability => Mortgage; // Overridden
         public override decimal NetValue => EstimatedHomeValue - Liability;
 
-        public override string ToString() => $"{base.ToString()} is House Asset";
+        public override string ToString()
+        {
+            return $"{base.ToString()} is House Asset";
+        }
     }
 
     public class Stock : Asset
     {
-        public Stock(int assetId) : base(assetId) { }
+        public Stock(int assetId) : base(assetId)
+        {
+        }
 
         public long SharesOwned { get; set; }
         public decimal CurrentPrice { get; set; }
@@ -39,6 +48,9 @@
         // We won't override Liability here, because the default implementation will do.
         public override decimal NetValue => CurrentPrice * SharesOwned;
 
-        public override string ToString() => $"{base.ToString()} is Stock Asset";
+        public override string ToString()
+        {
+            return $"{base.ToString()} is Stock Asset";
+        }
     }
 }
