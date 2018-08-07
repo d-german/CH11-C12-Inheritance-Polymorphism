@@ -11,10 +11,7 @@
         public virtual decimal Liability { get; } = 0; // Virtual
         public abstract decimal NetValue { get; } // Note empty implementation
 
-        public override string ToString()
-        {
-            return $"{Name} id: {assetId}";
-        }
+        public override string ToString() => $"{Name} id: {assetId}";
     }
 
     public class House : Asset
@@ -30,10 +27,7 @@
         public override decimal Liability => Mortgage; // Overridden
         public override decimal NetValue => EstimatedHomeValue - Liability;
 
-        public override string ToString()
-        {
-            return $"{base.ToString()} is House Asset";
-        }
+        public override string ToString() => $"{base.ToString()} is House Asset";
     }
 
     public class Stock : Asset
@@ -48,9 +42,6 @@
         // We won't override Liability here, because the default implementation will do.
         public override decimal NetValue => CurrentPrice * SharesOwned;
 
-        public override string ToString()
-        {
-            return $"{base.ToString()} is Stock Asset";
-        }
+        public override string ToString() => $"{base.ToString()} is Stock Asset";
     }
 }
