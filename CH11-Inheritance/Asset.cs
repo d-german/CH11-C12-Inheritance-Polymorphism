@@ -1,6 +1,6 @@
 ﻿namespace CH11_Inheritance
 {
-    public abstract class Asset : object
+    public abstract partial class Asset : object
     {
         private int assetId = 12355;
 

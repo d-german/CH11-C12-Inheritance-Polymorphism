@@ -21,5 +21,12 @@ namespace CH11_InheritanceTests
             var actual = mansion.ToString();
             Assert.AreEqual(expected, actual);
         }
+
+        [TestMethod]
+        public void AssetBuilderTest()
+        {
+            var asset = Asset.BuildAsset("My House", 20000);
+            Assert.IsTrue(asset is House);
+        }
     }
 }
