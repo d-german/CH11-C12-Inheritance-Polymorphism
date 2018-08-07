@@ -1,4 +1,4 @@
-﻿using System;
+﻿using System.Collections.Generic;
 
 namespace CH11_Inheritance
 {
@@ -6,12 +6,10 @@ namespace CH11_Inheritance
     {
         private static void Main(string[] args)
         {
-            Asset a = new Stock(123);
-
-            if (a is Stock)
+            var assets = new List<Asset>
             {
-                Console.WriteLine(((Stock)a).SharesOwned);
-            }
+                Asset.BuildAsset("House1", 20000)
+            };
         }
     }
 }
