@@ -1,5 +1,4 @@
-﻿using System;
-using CH11_Inheritance;
+﻿using CH11_Inheritance;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace CH11_InheritanceTests
