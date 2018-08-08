@@ -9,7 +9,7 @@
             {
                 case int c when c <= 20000:
                     return new House(id) { Name = name };
-                case int c when c <= 30000:
+                case int c when c >= 30000:
                     return new Stock(id) { Name = name };
                 default:
                     return null;
