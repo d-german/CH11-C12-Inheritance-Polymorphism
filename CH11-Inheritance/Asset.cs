@@ -21,7 +21,7 @@
             // this.assetId = 6;
         }
 
-        public decimal Mortgage { get; set; }
+        public decimal Mortgage { get; set; } = 250000;
         public decimal EstimatedHomeValue { get; set; } = 0;
 
         public override decimal Liability => Mortgage; // Overridden
