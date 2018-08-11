@@ -5,7 +5,6 @@
         private static void Main(string[] args)
         {
             TestIPrinter(new EconomicPrinter());
-
             TestIPrinter(new AllInOnePrinter());
         }
 
