@@ -11,7 +11,7 @@
 
         public string Name { get; set; }
 
-        public virtual decimal Liability { get; } = 0; // Virtual and readonly
+        public virtual decimal Liability { get; } // Virtual and readonly
 
         public abstract decimal GetNetValue();
 
