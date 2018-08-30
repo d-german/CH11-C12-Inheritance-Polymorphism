@@ -2,11 +2,11 @@
 {
     public abstract partial class Asset : object
     {
-        private readonly int assetId = 12355;
+        private readonly int _assetId = 12355;
 
         protected Asset(int assetId)
         {
-            this.assetId = assetId;
+            this._assetId = assetId;
         }
 
         public string Name { get; set; }
@@ -17,7 +17,7 @@
 
         public override string ToString()
         {
-            return $"{Name} id: {assetId}";
+            return $"{Name} id: {_assetId}";
         }
     }
 
