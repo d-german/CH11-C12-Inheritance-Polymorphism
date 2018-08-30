@@ -1,12 +1,12 @@
 ﻿namespace CH11_Inheritance
 {
-    public abstract partial class Asset : object
+    public abstract partial class Asset : object //not needed, here for illustration 
     {
-        private readonly int _assetId = 12355;
+        private readonly int assetId;
 
         protected Asset(int assetId)
         {
-            this._assetId = assetId;
+            this.assetId = assetId; //use "this" because of shadowing
         }
 
         public string Name { get; set; }
@@ -17,7 +17,7 @@
 
         public override string ToString()
         {
-            return $"{Name} id: {_assetId}";
+            return $"{Name} id: {assetId}";
         }
     }
 
@@ -31,7 +31,10 @@
         public decimal Mortgage { get; set; } = 250000;
         public decimal EstimatedHomeValue { get; set; } = 0;
 
-        public override decimal Liability => Mortgage;
+        public override decimal Liability
+        {
+            get { return Mortgage; }
+        }
 
         public override decimal GetNetValue()
         {
