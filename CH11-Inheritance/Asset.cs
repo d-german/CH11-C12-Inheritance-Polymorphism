@@ -23,7 +23,7 @@
 
     public class House : Asset
     {
-        public House(int assetId) : base(assetId)
+        public House(int assetId) : base(assetId) //base(assetId) is used not this(assetId)
         {
             // this.assetId = 6;
         }
